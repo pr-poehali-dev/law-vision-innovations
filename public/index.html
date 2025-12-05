@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LawVision - Юридические решения нового поколения</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <div class="logo-icon">⚖️</div>
+                    <span class="logo-text">LawVision</span>
+                </div>
+                <div class="nav-links">
+                    <a href="#about">О компании</a>
+                    <a href="#services">Услуги</a>
+                    <a href="#cases">Кейсы</a>
+                    <a href="#team">Команда</a>
+                    <a href="#blog">Блог</a>
+                    <a href="#contact">Контакты</a>
+                </div>
+                <button class="btn-primary" onclick="openModal()">Консультация</button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-blob hero-blob-1"></div>
+        <div class="hero-blob hero-blob-2"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-left">
+                    <div class="badge">
+                        <div class="pulse-dot"></div>
+                        <span>Юридические решения нового поколения</span>
+                    </div>
+                    <h1 class="hero-title">
+                        Защита бизнеса в эпоху 
+                        <span class="gradient-text">цифровых трансформаций</span>
+                    </h1>
+                    <p class="hero-description">
+                        LawVision — это юридическая компания, которая сочетает многолетний опыт с инновационными технологиями. 
+                        Мы создаем правовые стратегии, которые не только защищают, но и ускоряют рост вашего бизнеса.
+                    </p>
+                    <div class="hero-buttons">
+                        <button class="btn-primary btn-lg" onclick="openModal()">Получить консультацию</button>
+                        <a href="#services" class="btn-secondary btn-lg">Наши услуги</a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <div class="stat-number">15+</div>
+                            <div class="stat-label">лет опыта</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">500+</div>
+                            <div class="stat-label">клиентов</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">95%</div>
+                            <div class="stat-label">побед</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-right">
+                    <div class="hero-visual">
+                        <div class="hero-card hero-card-1">⚖️</div>
+                        <div class="hero-card hero-card-2">
+                            <div class="line"></div>
+                            <div class="line short"></div>
+                            <div class="line shorter"></div>
+                        </div>
+                        <div class="hero-glow"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section section-gray">
+        <div class="container">
+            <div class="section-header">
+                <h2>О компании</h2>
+                <p>LawVision была основана в 2009 году группой юристов, объединенных общим видением: 
+                использовать технологии для предоставления более эффективных юридических услуг.</p>
+            </div>
+            <div class="grid grid-3">
+                <div class="card">
+                    <div class="card-icon">🎯</div>
+                    <h3>Наша миссия</h3>
+                    <p>Сделать качественные юридические услуги доступными и понятными для каждого бизнеса, 
+                    независимо от его размера</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">👁️</div>
+                    <h3>Наше видение</h3>
+                    <p>Стать лидером в области инновационных юридических решений, 
+                    устанавливая новые стандарты качества и эффективности</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">❤️</div>
+                    <h3>Наши ценности</h3>
+                    <p>Профессионализм, честность, инновации и персональный подход к каждому клиенту</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Наши услуги</h2>
+                <p>Комплексное юридическое сопровождение для бизнеса любого масштаба</p>
+            </div>
+            <div class="grid grid-3">
+                <div class="card card-hover">
+                    <div class="card-icon gradient">🏢</div>
+                    <h3>Корпоративное право</h3>
+                    <p>Юридическое сопровождение бизнеса на всех этапах развития</p>
+                </div>
+                <div class="card card-hover">
+                    <div class="card-icon gradient">⚖️</div>
+                    <h3>Судебная защита</h3>
+                    <p>Представительство интересов в арбитражных и общих судах</p>
+                </div>
+                <div class="card card-hover">
+                    <div class="card-icon gradient">📋</div>
+                    <h3>Договорная работа</h3>
+                    <p>Разработка и экспертиза коммерческих договоров</p>
+                </div>
+                <div class="card card-hover">
+                    <div class="card-icon gradient">🛡️</div>
+                    <h3>Защита интеллектуальной собственности</h3>
+                    <p>Регистрация и защита прав на товарные знаки и патенты</p>
+                </div>
+                <div class="card card-hover">
+                    <div class="card-icon gradient">💼</div>
+                    <h3>M&A сделки</h3>
+                    <p>Сопровождение слияний, поглощений и реорганизаций</p>
+                </div>
+                <div class="card card-hover">
+                    <div class="card-icon gradient">👥</div>
+                    <h3>Трудовое право</h3>
+                    <p>Решение кадровых вопросов и трудовых споров</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cases" class="section section-gray">
+        <div class="container">
+            <div class="section-header">
+                <h2>Наши кейсы</h2>
+                <p>Примеры успешно реализованных проектов и решенных задач</p>
+            </div>
+            <div class="grid grid-3">
+                <div class="card">
+                    <div class="case-result">₽50M выигранный спор</div>
+                    <h3>Защита IT-стартапа</h3>
+                    <p>Успешно защитили права на программное обеспечение в споре с крупной корпорацией</p>
+                </div>
+                <div class="card">
+                    <div class="case-result">₽2B сделка</div>
+                    <h3>M&A сделка</h3>
+                    <p>Провели юридическое сопровождение сделки по слиянию двух технологических компаний</p>
+                </div>
+                <div class="card">
+                    <div class="case-result">100% решение</div>
+                    <h3>Корпоративный конфликт</h3>
+                    <p>Урегулировали корпоративный конфликт между акционерами без судебного разбирательства</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="team" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Наша команда</h2>
+                <p>Опытные юристы с подтвержденной экспертизой в различных областях права</p>
+            </div>
+            <div class="grid grid-4">
+                <div class="card team-card">
+                    <div class="team-avatar">👤</div>
+                    <h3>Анна Соколова</h3>
+                    <p class="team-position">Управляющий партнер</p>
+                    <p class="team-experience">15 лет опыта</p>
+                </div>
+                <div class="card team-card">
+                    <div class="team-avatar">👤</div>
+                    <h3>Дмитрий Петров</h3>
+                    <p class="team-position">Партнер, M&A практика</p>
+                    <p class="team-experience">12 лет опыта</p>
+                </div>
+                <div class="card team-card">
+                    <div class="team-avatar">👤</div>
+                    <h3>Елена Волкова</h3>
+                    <p class="team-position">Партнер, судебная практика</p>
+                    <p class="team-experience">14 лет опыта</p>
+                </div>
+                <div class="card team-card">
+                    <div class="team-avatar">👤</div>
+                    <h3>Максим Орлов</h3>
+                    <p class="team-position">Старший юрист, IP</p>
+                    <p class="team-experience">8 лет опыта</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="blog" class="section section-gray">
+        <div class="container">
+            <div class="section-header">
+                <h2>Блог</h2>
+                <p>Актуальные материалы о праве, бизнесе и технологиях</p>
+            </div>
+            <div class="grid grid-3">
+                <div class="card blog-card">
+                    <div class="blog-category">Корпоративное право</div>
+                    <h3>Новые правила корпоративного управления 2024</h3>
+                    <p class="blog-date">📅 15 ноября 2024</p>
+                </div>
+                <div class="card blog-card">
+                    <div class="blog-category">IT-право</div>
+                    <h3>Защита данных: что нужно знать бизнесу</h3>
+                    <p class="blog-date">📅 10 ноября 2024</p>
+                </div>
+                <div class="card blog-card">
+                    <div class="blog-category">M&A</div>
+                    <h3>Тренды M&A рынка в условиях цифровизации</h3>
+                    <p class="blog-date">📅 5 ноября 2024</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Контакты</h2>
+                <p>Свяжитесь с нами удобным для вас способом</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <h4>Адрес</h4>
+                            <p>г. Москва, ул. Тверская, д. 15, офис 501</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div>
+                            <h4>Телефон</h4>
+                            <p>+7 (495) 123-45-67</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">✉️</div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>info@lawvision.ru</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">🕐</div>
+                        <div>
+                            <h4>Время работы</h4>
+                            <p>Пн-Пт: 9:00 - 18:00<br>Сб-Вс: выходной</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Напишите нам</h3>
+                    <p style="color: #666; margin-bottom: 20px;">Мы ответим в течение 24 часов</p>
+                    <form id="contactForm" onsubmit="handleSubmit(event)">
+                        <div class="form-group">
+                            <label>Имя</label>
+                            <input type="text" placeholder="Ваше имя" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" placeholder="your@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Сообщение</label>
+                            <textarea placeholder="Ваше сообщение" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary btn-block">Отправить</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo">
+                    <div class="logo-icon">⚖️</div>
+                    <span class="logo-text">LawVision</span>
+                </div>
+                <p>© 2024 LawVision. Все права защищены.</p>
+                <div class="social-links">
+                    <a href="#">📘</a>
+                    <a href="#">🐦</a>
+                    <a href="#">💼</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Запись на консультацию</h2>
+            <p style="color: #666; margin-bottom: 20px;">Выберите тип консультации и оставьте свои контактные данные</p>
+            <form id="consultationForm" onsubmit="handleConsultation(event)">
+                <div class="form-group">
+                    <label>Тип консультации</label>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="consultationType" value="free" checked>
+                            Бесплатная консультация (30 минут)
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="consultationType" value="paid">
+                            Платная консультация (60 минут, ₽5000)
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Имя</label>
+                    <input type="text" placeholder="Ваше имя" required>
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" placeholder="your@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label>Телефон</label>
+                    <input type="tel" placeholder="+7 (999) 999-99-99" required>
+                </div>
+                <div class="form-group">
+                    <label>Описание вопроса</label>
+                    <textarea placeholder="Кратко опишите вашу ситуацию" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn-primary btn-block">Отправить заявку</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
