@@ -117,29 +117,29 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-background via-background to-muted">
-      <nav className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-lg border-b border-border">
-        <div className="container mx-auto px-4 py-4">
+    <div className="min-h-screen bg-background">
+      <nav className="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-border shadow-sm">
+        <div className="container mx-auto px-6 py-5">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
+              <div className="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center shadow-lg shadow-primary/20">
                 <Icon name="Scale" size={24} className="text-white" />
               </div>
-              <span className="text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+              <span className="text-2xl font-bold text-foreground">
                 LawVision
               </span>
             </div>
             <div className="hidden md:flex items-center gap-8">
-              <a href="#about" className="text-foreground/80 hover:text-primary transition-colors">О компании</a>
-              <a href="#services" className="text-foreground/80 hover:text-primary transition-colors">Услуги</a>
-              <a href="#cases" className="text-foreground/80 hover:text-primary transition-colors">Кейсы</a>
-              <a href="#team" className="text-foreground/80 hover:text-primary transition-colors">Команда</a>
-              <a href="#blog" className="text-foreground/80 hover:text-primary transition-colors">Блог</a>
-              <a href="#contact" className="text-foreground/80 hover:text-primary transition-colors">Контакты</a>
+              <a href="#about" className="text-foreground/70 hover:text-primary transition-colors font-medium">О компании</a>
+              <a href="#services" className="text-foreground/70 hover:text-primary transition-colors font-medium">Услуги</a>
+              <a href="#cases" className="text-foreground/70 hover:text-primary transition-colors font-medium">Кейсы</a>
+              <a href="#team" className="text-foreground/70 hover:text-primary transition-colors font-medium">Команда</a>
+              <a href="#blog" className="text-foreground/70 hover:text-primary transition-colors font-medium">Блог</a>
+              <a href="#contact" className="text-foreground/70 hover:text-primary transition-colors font-medium">Контакты</a>
             </div>
             <Dialog>
               <DialogTrigger asChild>
-                <Button className="bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-opacity">
+                <Button className="bg-primary hover:bg-primary/90 shadow-lg shadow-primary/30">
                   Консультация
                 </Button>
               </DialogTrigger>
@@ -221,26 +221,35 @@ const Index = () => {
         </div>
       </nav>
 
-      <section className="pt-32 pb-20 px-4">
-        <div className="container mx-auto">
-          <div className="max-w-4xl mx-auto text-center animate-fade-in">
-            <div className="inline-block mb-4 px-4 py-2 bg-primary/10 rounded-full border border-primary/20">
-              <span className="text-primary font-semibold">Юридические решения нового поколения</span>
-            </div>
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-primary via-secondary to-primary bg-clip-text text-transparent">
-              Защита бизнеса в эпоху цифровых трансформаций
-            </h1>
-            <p className="text-xl text-foreground/70 mb-8 max-w-2xl mx-auto">
-              LawVision — это юридическая компания, которая сочетает многолетний опыт с инновационными технологиями. 
-              Мы создаем правовые стратегии, которые не только защищают, но и ускоряют рост вашего бизнеса.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Dialog>
-                <DialogTrigger asChild>
-                  <Button size="lg" className="bg-gradient-to-r from-primary to-secondary text-lg px-8">
-                    Получить консультацию
-                  </Button>
-                </DialogTrigger>
+      <section className="pt-32 pb-24 px-4 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-accent/5 to-transparent"></div>
+        <div className="absolute top-20 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent/10 rounded-full blur-3xl"></div>
+        <div className="container mx-auto relative">
+          <div className="max-w-5xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div className="space-y-8 animate-fade-in">
+                <div className="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full border border-primary/20 shadow-sm">
+                  <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
+                  <span className="text-sm font-medium text-foreground">Юридические решения нового поколения</span>
+                </div>
+                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
+                  Защита бизнеса в эпоху{' '}
+                  <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
+                    цифровых трансформаций
+                  </span>
+                </h1>
+                <p className="text-lg text-foreground/70 leading-relaxed">
+                  LawVision — это юридическая компания, которая сочетает многолетний опыт с инновационными технологиями. 
+                  Мы создаем правовые стратегии, которые не только защищают, но и ускоряют рост вашего бизнеса.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Dialog>
+                    <DialogTrigger asChild>
+                      <Button size="lg" className="bg-primary hover:bg-primary/90 shadow-lg shadow-primary/30 text-lg px-8">
+                        Получить консультацию
+                      </Button>
+                    </DialogTrigger>
                 <DialogContent className="sm:max-w-[500px]">
                   <DialogHeader>
                     <DialogTitle>Запись на консультацию</DialogTitle>
@@ -315,29 +324,46 @@ const Index = () => {
                   </form>
                 </DialogContent>
               </Dialog>
-              <Button size="lg" variant="outline" className="text-lg px-8 border-primary/30 hover:bg-primary/10">
-                <a href="#services">Наши услуги</a>
-              </Button>
-            </div>
-            <div className="mt-16 grid grid-cols-3 gap-8 max-w-2xl mx-auto">
-              <div className="text-center">
-                <div className="text-4xl font-bold text-primary mb-2">15+</div>
-                <div className="text-foreground/70">лет опыта</div>
+                  <Button size="lg" variant="outline" className="text-lg px-8 border-primary/30 hover:bg-secondary">
+                    <a href="#services">Наши услуги</a>
+                  </Button>
+                </div>
+                <div className="grid grid-cols-3 gap-6 pt-8">
+                  <div className="space-y-1">
+                    <div className="text-4xl font-bold text-primary">15+</div>
+                    <div className="text-sm text-foreground/60">лет опыта</div>
+                  </div>
+                  <div className="space-y-1">
+                    <div className="text-4xl font-bold text-primary">500+</div>
+                    <div className="text-sm text-foreground/60">клиентов</div>
+                  </div>
+                  <div className="space-y-1">
+                    <div className="text-4xl font-bold text-primary">95%</div>
+                    <div className="text-sm text-foreground/60">побед</div>
+                  </div>
+                </div>
               </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-primary mb-2">500+</div>
-                <div className="text-foreground/70">довольных клиентов</div>
-              </div>
-              <div className="text-center">
-                <div className="text-4xl font-bold text-primary mb-2">95%</div>
-                <div className="text-foreground/70">выигранных дел</div>
+              <div className="relative hidden md:block">
+                <div className="relative w-full h-[500px] bg-gradient-to-br from-primary/10 to-accent/10 rounded-3xl p-8 shadow-2xl">
+                  <div className="absolute top-8 right-8 w-32 h-32 bg-white rounded-2xl shadow-lg flex items-center justify-center transform rotate-6">
+                    <Icon name="Scale" size={64} className="text-primary" />
+                  </div>
+                  <div className="absolute bottom-12 left-8 w-40 h-40 bg-white rounded-2xl shadow-xl p-6 transform -rotate-3">
+                    <div className="space-y-2">
+                      <div className="h-3 bg-primary/20 rounded"></div>
+                      <div className="h-3 bg-accent/20 rounded w-3/4"></div>
+                      <div className="h-3 bg-primary/20 rounded w-1/2"></div>
+                    </div>
+                  </div>
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-gradient-to-br from-primary to-accent rounded-full opacity-20 blur-2xl"></div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="about" className="py-20 px-4 bg-muted/50">
+      <section id="about" className="py-20 px-4 bg-gradient-to-b from-muted/30 to-background">
         <div className="container mx-auto">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">О компании</h2>
@@ -347,9 +373,9 @@ const Index = () => {
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
-            <Card className="border-primary/20 hover:border-primary/50 transition-all hover:scale-105">
+            <Card className="border-border bg-white hover:border-primary/50 transition-all hover:scale-105 hover:shadow-xl">
               <CardHeader>
-                <div className="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center mb-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center mb-4 shadow-lg shadow-primary/20">
                   <Icon name="Target" size={24} className="text-white" />
                 </div>
                 <CardTitle>Наша миссия</CardTitle>
@@ -361,9 +387,9 @@ const Index = () => {
                 </p>
               </CardContent>
             </Card>
-            <Card className="border-primary/20 hover:border-primary/50 transition-all hover:scale-105">
+            <Card className="border-border bg-white hover:border-primary/50 transition-all hover:scale-105 hover:shadow-xl">
               <CardHeader>
-                <div className="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center mb-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center mb-4 shadow-lg shadow-primary/20">
                   <Icon name="Eye" size={24} className="text-white" />
                 </div>
                 <CardTitle>Наше видение</CardTitle>
@@ -375,9 +401,9 @@ const Index = () => {
                 </p>
               </CardContent>
             </Card>
-            <Card className="border-primary/20 hover:border-primary/50 transition-all hover:scale-105">
+            <Card className="border-border bg-white hover:border-primary/50 transition-all hover:scale-105 hover:shadow-xl">
               <CardHeader>
-                <div className="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center mb-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center mb-4 shadow-lg shadow-primary/20">
                   <Icon name="Heart" size={24} className="text-white" />
                 </div>
                 <CardTitle>Наши ценности</CardTitle>
@@ -392,7 +418,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="services" className="py-20 px-4">
+      <section id="services" className="py-20 px-4 bg-white">
         <div className="container mx-auto">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">Наши услуги</h2>
@@ -402,9 +428,9 @@ const Index = () => {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {services.map((service, index) => (
-              <Card key={index} className="border-primary/20 hover:border-primary/50 transition-all hover:scale-105 hover:shadow-xl hover:shadow-primary/20">
+              <Card key={index} className="border-border bg-white hover:border-primary transition-all hover:scale-105 hover:shadow-2xl group">
                 <CardHeader>
-                  <div className="w-14 h-14 bg-gradient-to-br from-primary to-secondary rounded-xl flex items-center justify-center mb-4">
+                  <div className="w-14 h-14 bg-gradient-to-br from-primary to-accent rounded-2xl flex items-center justify-center mb-4 shadow-lg shadow-primary/20 group-hover:shadow-primary/40 transition-shadow">
                     <Icon name={service.icon} size={28} className="text-white" />
                   </div>
                   <CardTitle className="text-xl">{service.title}</CardTitle>
@@ -418,7 +444,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="cases" className="py-20 px-4 bg-muted/50">
+      <section id="cases" className="py-20 px-4 bg-gradient-to-b from-muted/30 to-background">
         <div className="container mx-auto">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">Наши кейсы</h2>
@@ -428,9 +454,9 @@ const Index = () => {
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {cases.map((caseItem, index) => (
-              <Card key={index} className="border-primary/20 hover:border-primary/50 transition-all hover:scale-105">
+              <Card key={index} className="border-border bg-white hover:border-primary transition-all hover:scale-105 hover:shadow-2xl">
                 <CardHeader>
-                  <div className="text-3xl font-bold text-primary mb-2">{caseItem.result}</div>
+                  <div className="text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-2">{caseItem.result}</div>
                   <CardTitle>{caseItem.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -442,7 +468,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="team" className="py-20 px-4">
+      <section id="team" className="py-20 px-4 bg-white">
         <div className="container mx-auto">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">Наша команда</h2>
@@ -452,9 +478,9 @@ const Index = () => {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {team.map((member, index) => (
-              <Card key={index} className="border-primary/20 hover:border-primary/50 transition-all hover:scale-105 text-center">
+              <Card key={index} className="border-border bg-white hover:border-primary transition-all hover:scale-105 hover:shadow-2xl text-center">
                 <CardHeader>
-                  <div className="w-24 h-24 bg-gradient-to-br from-primary to-secondary rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <div className="w-24 h-24 bg-gradient-to-br from-primary to-accent rounded-full mx-auto mb-4 flex items-center justify-center shadow-lg shadow-primary/20">
                     <Icon name="User" size={40} className="text-white" />
                   </div>
                   <CardTitle className="text-xl">{member.name}</CardTitle>
@@ -469,7 +495,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="blog" className="py-20 px-4 bg-muted/50">
+      <section id="blog" className="py-20 px-4 bg-gradient-to-b from-muted/30 to-background">
         <div className="container mx-auto">
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">Блог</h2>
@@ -479,9 +505,9 @@ const Index = () => {
           </div>
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {blogPosts.map((post, index) => (
-              <Card key={index} className="border-primary/20 hover:border-primary/50 transition-all hover:scale-105 cursor-pointer">
+              <Card key={index} className="border-border bg-white hover:border-primary transition-all hover:scale-105 hover:shadow-2xl cursor-pointer">
                 <CardHeader>
-                  <div className="text-sm text-primary mb-2">{post.category}</div>
+                  <div className="inline-block px-3 py-1 bg-secondary text-primary text-sm font-medium rounded-full mb-3">{post.category}</div>
                   <CardTitle className="text-lg">{post.title}</CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -496,7 +522,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="contact" className="py-20 px-4">
+      <section id="contact" className="py-20 px-4 bg-white">
         <div className="container mx-auto">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
@@ -507,9 +533,9 @@ const Index = () => {
             </div>
             <div className="grid md:grid-cols-2 gap-12">
               <div className="space-y-6">
-                <Card className="border-primary/20">
+                <Card className="border-border bg-white hover:border-primary/50 transition-all">
                   <CardContent className="flex items-start gap-4 pt-6">
-                    <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div className="w-10 h-10 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg shadow-primary/20">
                       <Icon name="MapPin" size={20} className="text-white" />
                     </div>
                     <div>
@@ -552,7 +578,7 @@ const Index = () => {
                   </CardContent>
                 </Card>
               </div>
-              <Card className="border-primary/20">
+              <Card className="border-border bg-white shadow-xl">
                 <CardHeader>
                   <CardTitle>Напишите нам</CardTitle>
                   <CardDescription>Мы ответим в течение 24 часов</CardDescription>
@@ -591,7 +617,7 @@ const Index = () => {
                         required
                       />
                     </div>
-                    <Button type="submit" className="w-full bg-gradient-to-r from-primary to-secondary">
+                    <Button type="submit" className="w-full bg-primary hover:bg-primary/90 shadow-lg shadow-primary/30">
                       Отправить
                     </Button>
                   </form>
@@ -602,14 +628,14 @@ const Index = () => {
         </div>
       </section>
 
-      <footer className="py-8 px-4 border-t border-border">
+      <footer className="py-8 px-4 border-t border-border bg-muted/30">
         <div className="container mx-auto">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
+              <div className="w-8 h-8 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center shadow-lg shadow-primary/20">
                 <Icon name="Scale" size={20} className="text-white" />
               </div>
-              <span className="text-xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+              <span className="text-xl font-bold text-foreground">
                 LawVision
               </span>
             </div>
